@@ -13,21 +13,21 @@ import { Component } from '@angular/core';
         [footerHeight]="50"
         [rowHeight]="'auto'">
         <datatable-column name="Name">
-          <template let-column="column">
+          <template let-column="column" column-header-template>
             Holla! {{column.name}}
           </template>
-          <template let-value="value">
+          <template let-value="value" column-cell-template>
             Hi: <strong>{{value}}</strong>
           </template>
         </datatable-column>
         <datatable-column name="Gender">
-          <template let-row="row" let-value="value">
+          <template column-cell-template let-row="row" let-value="value">
             My name is: <i [innerHTML]="row['name']"></i> and <i>{{value}}</i>
             <div>{{joke}}</div>
           </template>
         </datatable-column>
         <datatable-column name="Age">
-          <template let-value="value">
+          <template column-cell-template let-value="value">
             <div style="border:solid 1px #ddd;margin:5px;padding:3px">
               <div style="background:#999;height:10px" [style.width]="value + '%'"></div>
             </div>

@@ -130,4 +130,8 @@ export class AppComponent {
 
   version: string = APP_VERSION;
 
+  constructor() {
+    this.state = 'inline';
+  }
+
 }
