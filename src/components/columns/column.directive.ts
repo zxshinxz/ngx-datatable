@@ -1,10 +1,9 @@
-import { Directive, Component, TemplateRef, ContentChild, ContentChildren, Input, QueryList } from '@angular/core';
+import { Directive, TemplateRef, ContentChild, ContentChildren, Input, QueryList } from '@angular/core';
 import { DataTableColumnHeaderDirective } from './column-header.directive';
 import { DataTableColumnCellDirective } from './column-cell.directive';
 
-@Component({
-  selector: 'datatable-column',
-  template: `<ng-content></ng-content>`
+@Directive({
+  selector: 'datatable-column'
 })
 export class DataTableColumnDirective {
 
