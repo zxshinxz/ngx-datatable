@@ -14,7 +14,7 @@ import { DatatableRowDetailDirective } from './row-detail.directive';
 import { scrollbarWidth, setColumnDefaults, translateTemplates } from '../utils';
 
 @Component({
-  selector: 'datatable',
+  selector: 'swui-datatable',
   template: `
     <div
       visibility-observer

@@ -58,7 +58,9 @@ import {
   exports: [
     DatatableComponent,
     DatatableRowDetailDirective,
-    DataTableColumnDirective
+    DataTableColumnDirective,
+    DataTableColumnHeaderDirective,
+    DataTableColumnCellDirective
   ]
 })
 export class Angular2DataTableModule { }

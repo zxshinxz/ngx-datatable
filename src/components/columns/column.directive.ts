@@ -1,10 +1,8 @@
-import { Directive, TemplateRef, ContentChild, ContentChildren, Input, QueryList } from '@angular/core';
+import { Directive, TemplateRef, ContentChild, Input } from '@angular/core';
 import { DataTableColumnHeaderDirective } from './column-header.directive';
 import { DataTableColumnCellDirective } from './column-cell.directive';
 
-@Directive({
-  selector: 'datatable-column'
-})
+@Directive({ selector: 'swui-datatable-column' })
 export class DataTableColumnDirective {
 
   @Input() name;
@@ -22,19 +20,10 @@ export class DataTableColumnDirective {
   @Input() width;
   @Input() maxWidth;
 
-  @ContentChildren(TemplateRef) 
-  set templates(val: QueryList<TemplateRef<any>>) {
-    console.log('val', val);
-  }
-
   @ContentChild(DataTableColumnCellDirective, { read: TemplateRef }) 
   cellTemplate: DataTableColumnCellDirective;
 
   @ContentChild(DataTableColumnHeaderDirective, { read: TemplateRef }) 
   headerTemplate: DataTableColumnHeaderDirective;
-
-  ngAfterContentInit() {
-    console.log('blah', this.cellTemplate, this.headerTemplate);
-  }
 
 }
