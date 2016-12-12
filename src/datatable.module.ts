@@ -18,7 +18,8 @@ import {
   DataTableSelectionComponent,
   DataTableColumnHeaderDirective,
   DataTableColumnCellDirective,
-  DatatableRowDetailTemplateDirective
+  DatatableRowDetailTemplateDirective,
+  DatatableCheckboxColumnDirective
 } from './components';
 
 import {
@@ -55,7 +56,8 @@ import {
     DataTableBodyCellComponent,
     DataTableSelectionComponent,
     DataTableColumnHeaderDirective,
-    DataTableColumnCellDirective
+    DataTableColumnCellDirective,
+    DatatableCheckboxColumnDirective
   ],
   exports: [
     DatatableComponent,
@@ -63,7 +65,8 @@ import {
     DatatableRowDetailTemplateDirective,
     DataTableColumnDirective,
     DataTableColumnHeaderDirective,
-    DataTableColumnCellDirective
+    DataTableColumnCellDirective,
+    DatatableCheckboxColumnDirective
   ]
 })
 export class Angular2DataTableModule { }

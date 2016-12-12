@@ -8,7 +8,7 @@ import {
 import { forceFillColumnWidths, adjustColumnWidths, sortRows } from '../utils';
 import { ColumnMode, SortType, SelectionType } from '../types';
 import { DataTableBodyComponent } from './body';
-import { DataTableColumnDirective } from './columns';
+import { DataTableColumnDirective, DatatableCheckboxColumnDirective } from './columns';
 import { DatatableRowDetailDirective } from './row-detail';
 import { scrollbarWidth, setColumnDefaults, throttleable, translateTemplates } from '../utils';
 
@@ -582,7 +582,8 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * 
    * @memberOf DatatableComponent
    */
-  @ContentChildren(DataTableColumnDirective)
+  // DataTableColumnDirective|DatatableCheckboxColumnDirective
+  @ContentChildren(DatatableCheckboxColumnDirective)
   set columnTemplates(val: QueryList<DataTableColumnDirective>) {
     this._columnTemplates = val;
 

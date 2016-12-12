@@ -26,15 +26,9 @@ import { Component } from '@angular/core';
           [selectionType]="'checkbox'"
           (activate)="onActivate($event)"
           (select)='onSelect($event)'>
-          <swui-datatable-column
-            [width]="30"
-            [sortable]="false"
-            [canAutoResize]="false"
-            [draggable]="false"
-            [resizeable]="false"
-            [headerCheckboxable]="true"
-            [checkboxable]="true">
-          </swui-datatable-column>
+          <swui-datatable-checkbox-column
+            [headerCheckboxable]="true">
+          </swui-datatable-checkbox-column>
           <swui-datatable-column name="Name"></swui-datatable-column>
           <swui-datatable-column name="Gender"></swui-datatable-column>
           <swui-datatable-column name="Company"></swui-datatable-column>
