@@ -3,6 +3,7 @@
   "version": "4.1.0",
   "description": "ngx-datatable is a Angular2+ table grid component for presenting large and complex data.",
   "main": "release/index.js",
+  "module": "module.js",
   "typings": "release/index.d.ts",
   "scripts": {
     "check": "npm-check --skip-unused",

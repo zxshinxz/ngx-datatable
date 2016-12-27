@@ -1,5 +1,5 @@
 import { DataTableColumnDirective } from '../components/columns';
-import { camelCase, deCamelCase, id } from '../utils';
+import { camelCase, deCamelCase } from '../utils';
 
 /**
  * Sets the column defaults
@@ -13,7 +13,7 @@ export function setColumnDefaults(columns: any[]) {
 
   for(let column of columns) {
     if(!column.$$id) {
-      column.$$id = id();
+      column.$$id = ('0000' + (Math.random() * Math.pow(36, 4) << 0).toString(36)).slice(-4);
     }
 
     // translate name => prop

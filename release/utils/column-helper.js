@@ -13,7 +13,7 @@ function setColumnDefaults(columns) {
     for (var _i = 0, columns_1 = columns; _i < columns_1.length; _i++) {
         var column = columns_1[_i];
         if (!column.$$id) {
-            column.$$id = utils_1.id();
+            column.$$id = ('0000' + (Math.random() * Math.pow(36, 4) << 0).toString(36)).slice(-4);
         }
         // translate name => prop
         if (!column.prop && column.name) {
