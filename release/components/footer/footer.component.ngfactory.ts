@@ -242,7 +242,7 @@ export class View_DataTableFooterComponent0 extends import2.AppView<import0.Data
       this.renderer.setElementStyle(this._el_1,'height',((this.viewUtils.sanitizer.sanitize(import11.SecurityContext.STYLE,currVal_12) == null)? (null as any): (this.viewUtils.sanitizer.sanitize(import11.SecurityContext.STYLE,currVal_12).toString() + 'px')));
       this._expr_12 = currVal_12;
     }
-    const currVal_13:any = import3.inlineInterpolate(2,'',this.context.rowCount.toLocaleString(),' ',this.context.totalMessage,'');
+    const currVal_13:any = import3.inlineInterpolate(2,'총 ',this.context.rowCount.toLocaleString(),'',this.context.totalMessage,'');
     if (import3.checkBinding(throwOnChange,this._expr_13,currVal_13)) {
       this.renderer.setText(this._text_4,currVal_13);
       this._expr_13 = currVal_13;

@@ -169,7 +169,24 @@
       .datatable .datatable-footer .datatable-pager .pager li, .datatable .datatable-footer .datatable-pager .pager li a {
         outline: none; }
       .datatable .datatable-footer .datatable-pager .pager li a {
-        cursor: pointer;
-        display: inline-block; }
-      .datatable .datatable-footer .datatable-pager .pager li.disabled a {
-        cursor: not-allowed; }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 6px;
+        cursor: pointer; }
+        .datatable .datatable-footer .datatable-pager .pager li a img {
+          width: 12px;
+          height: 12px; }
+      .datatable .datatable-footer .datatable-pager .pager .page-counter {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400; }
+        .datatable .datatable-footer .datatable-pager .pager .page-counter li {
+          margin-top: 5px; }
+        .datatable .datatable-footer .datatable-pager .pager .page-counter .current-page {
+          margin-left: 20px;
+          margin-right: 12px;
+          color: #FC487E; }
+        .datatable .datatable-footer .datatable-pager .pager .page-counter .total-page {
+          margin-left: 12px;
+          margin-right: 20px; }

@@ -166,9 +166,9 @@ var DatatableComponent = (function () {
         this.messages = {
             // Message to show when array is presented
             // but contains no values
-            emptyMessage: 'No data to display',
+            emptyMessage: '',
             // Footer total message
-            totalMessage: 'total'
+            totalMessage: '개'
         };
         /**
          * This will be used when displaying or selecting rows.

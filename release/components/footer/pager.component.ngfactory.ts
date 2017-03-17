@@ -15,10 +15,9 @@ import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/constants';
 import * as import8 from '@angular/core/src/linker/component_factory';
 import * as import9 from '@angular/core/src/linker/view_container';
-import * as import10 from '../../../node_modules/@angular/common/src/directives/ng_for.ngfactory';
+import * as import10 from '../../../node_modules/@angular/common/src/directives/ng_if.ngfactory';
 import * as import11 from '@angular/core/src/linker/template_ref';
-import * as import12 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import13 from '@angular/common/src/directives/ng_for';
+import * as import12 from '@angular/common/src/directives/ng_if';
 export class Wrapper_DataTablePagerComponent {
   /*private*/ _eventHandler:Function;
   context:import0.DataTablePagerComponent;
@@ -148,57 +147,114 @@ export const DataTablePagerComponentNgFactory:import8.ComponentFactory<import0.D
 const styles_DataTablePagerComponent:any[] = ([] as any[]);
 class View_DataTablePagerComponent1 extends import2.AppView<any> {
   _el_0:any;
-  _text_1:any;
-  _el_2:any;
-  _text_3:any;
-  _text_4:any;
-  /*private*/ _expr_5:any;
-  /*private*/ _expr_6:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
     super(View_DataTablePagerComponent1,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
-    this._expr_5 = import1.UNINITIALIZED;
-    this._expr_6 = import1.UNINITIALIZED;
   }
   createInternal(rootSelector:string):import8.ComponentRef<any> {
-    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'li',new import3.InlineArray2(2,'class','pages'),(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
-    this._el_2 = import3.createRenderElement(this.renderer,this._el_0,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
-    this._text_3 = this.renderer.createText(this._el_2,'',(null as any));
-    this._text_4 = this.renderer.createText(this._el_0,'\n      ',(null as any));
-    var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_2,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_2));
-    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
-      this._el_0,
-      this._text_1,
-      this._el_2,
-      this._text_3,
-      this._text_4
-    ]
-    ),[disposable_0]);
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_left2_no.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
     return (null as any);
-  }
-  detectChangesInternal(throwOnChange:boolean):void {
-    const currVal_5:any = (this.context.$implicit.number === this.parentView.context.page);
-    if (import3.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
-      this.renderer.setElementClass(this._el_0,'active',currVal_5);
-      this._expr_5 = currVal_5;
-    }
-    const currVal_6:any = import3.inlineInterpolate(1,'\n          ',this.context.$implicit.text,'\n        ');
-    if (import3.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
-      this.renderer.setText(this._text_3,currVal_6);
-      this._expr_6 = currVal_6;
-    }
   }
   visitRootNodesInternal(cb:any,ctx:any):void {
     cb(this._el_0,ctx);
   }
-  handleEvent_2(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.parentView.context.selectPage(this.context.$implicit.number)) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
+}
+class View_DataTablePagerComponent2 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent2,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_left2.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent3 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent3,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_left_no.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent4 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent4,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_left.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent5 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent5,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_right_no.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent6 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent6,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_right.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent7 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent7,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_right2_no.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_DataTablePagerComponent8 extends import2.AppView<any> {
+  _el_0:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+    super(View_DataTablePagerComponent8,renderType_DataTablePagerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'img',new import3.InlineArray2(2,'src','assets/img/ic_pagenation_right2.png'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
   }
 }
 var renderType_DataTablePagerComponent:import4.RenderComponentType = import3.createRenderComponentType('',0,import5.ViewEncapsulation.None,styles_DataTablePagerComponent,{});
@@ -210,58 +266,89 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
   _text_4:any;
   _el_5:any;
   _text_6:any;
-  _el_7:any;
+  _anchor_7:any;
+  /*private*/ _vc_7:import9.ViewContainer;
+  _TemplateRef_7_5:any;
+  _NgIf_7_6:import10.Wrapper_NgIf;
   _text_8:any;
-  _text_9:any;
+  _anchor_9:any;
+  /*private*/ _vc_9:import9.ViewContainer;
+  _TemplateRef_9_5:any;
+  _NgIf_9_6:import10.Wrapper_NgIf;
   _text_10:any;
-  _el_11:any;
+  _text_11:any;
   _text_12:any;
   _el_13:any;
   _text_14:any;
   _el_15:any;
   _text_16:any;
-  _text_17:any;
+  _anchor_17:any;
+  /*private*/ _vc_17:import9.ViewContainer;
+  _TemplateRef_17_5:any;
+  _NgIf_17_6:import10.Wrapper_NgIf;
   _text_18:any;
   _anchor_19:any;
   /*private*/ _vc_19:import9.ViewContainer;
   _TemplateRef_19_5:any;
-  _NgFor_19_6:import10.Wrapper_NgFor;
+  _NgIf_19_6:import10.Wrapper_NgIf;
   _text_20:any;
-  _el_21:any;
+  _text_21:any;
   _text_22:any;
   _el_23:any;
   _text_24:any;
   _el_25:any;
   _text_26:any;
   _text_27:any;
-  _text_28:any;
-  _el_29:any;
+  _el_28:any;
+  _text_29:any;
   _text_30:any;
   _el_31:any;
   _text_32:any;
-  _el_33:any;
+  _text_33:any;
   _text_34:any;
-  _text_35:any;
+  _el_35:any;
   _text_36:any;
-  _text_37:any;
-  /*private*/ _expr_41:any;
-  /*private*/ _expr_42:any;
-  /*private*/ _expr_43:any;
-  /*private*/ _expr_44:any;
-  /*private*/ _expr_45:any;
-  /*private*/ _expr_46:any;
-  /*private*/ _expr_47:any;
-  /*private*/ _expr_48:any;
+  _el_37:any;
+  _text_38:any;
+  _anchor_39:any;
+  /*private*/ _vc_39:import9.ViewContainer;
+  _TemplateRef_39_5:any;
+  _NgIf_39_6:import10.Wrapper_NgIf;
+  _text_40:any;
+  _anchor_41:any;
+  /*private*/ _vc_41:import9.ViewContainer;
+  _TemplateRef_41_5:any;
+  _NgIf_41_6:import10.Wrapper_NgIf;
+  _text_42:any;
+  _text_43:any;
+  _text_44:any;
+  _el_45:any;
+  _text_46:any;
+  _el_47:any;
+  _text_48:any;
+  _anchor_49:any;
+  /*private*/ _vc_49:import9.ViewContainer;
+  _TemplateRef_49_5:any;
+  _NgIf_49_6:import10.Wrapper_NgIf;
+  _text_50:any;
+  _anchor_51:any;
+  /*private*/ _vc_51:import9.ViewContainer;
+  _TemplateRef_51_5:any;
+  _NgIf_51_6:import10.Wrapper_NgIf;
+  _text_52:any;
+  _text_53:any;
+  _text_54:any;
+  _text_55:any;
+  /*private*/ _expr_80:any;
+  /*private*/ _expr_81:any;
+  /*private*/ _expr_82:any;
+  /*private*/ _expr_83:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_DataTablePagerComponent0,renderType_DataTablePagerComponent,import6.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckOnce);
-    this._expr_41 = import1.UNINITIALIZED;
-    this._expr_42 = import1.UNINITIALIZED;
-    this._expr_43 = import1.UNINITIALIZED;
-    this._expr_44 = import1.UNINITIALIZED;
-    this._expr_45 = import1.UNINITIALIZED;
-    this._expr_46 = import1.UNINITIALIZED;
-    this._expr_47 = import1.UNINITIALIZED;
-    this._expr_48 = import1.UNINITIALIZED;
+    this._expr_80 = import1.UNINITIALIZED;
+    this._expr_81 = import1.UNINITIALIZED;
+    this._expr_82 = import1.UNINITIALIZED;
+    this._expr_83 = import1.UNINITIALIZED;
   }
   createInternal(rootSelector:string):import8.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
@@ -272,44 +359,83 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
     this._text_4 = this.renderer.createText(this._el_3,'\n        ',(null as any));
     this._el_5 = import3.createRenderElement(this.renderer,this._el_3,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
     this._text_6 = this.renderer.createText(this._el_5,'\n          ',(null as any));
-    this._el_7 = import3.createRenderElement(this.renderer,this._el_5,'i',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_8 = this.renderer.createText(this._el_5,'\n        ',(null as any));
-    this._text_9 = this.renderer.createText(this._el_3,'\n      ',(null as any));
-    this._text_10 = this.renderer.createText(this._el_1,'\n      ',(null as any));
-    this._el_11 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_12 = this.renderer.createText(this._el_11,'\n        ',(null as any));
-    this._el_13 = import3.createRenderElement(this.renderer,this._el_11,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
-    this._text_14 = this.renderer.createText(this._el_13,'\n          ',(null as any));
-    this._el_15 = import3.createRenderElement(this.renderer,this._el_13,'i',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_16 = this.renderer.createText(this._el_13,'\n        ',(null as any));
-    this._text_17 = this.renderer.createText(this._el_11,'\n      ',(null as any));
-    this._text_18 = this.renderer.createText(this._el_1,'\n      ',(null as any));
-    this._anchor_19 = this.renderer.createTemplateAnchor(this._el_1,(null as any));
-    this._vc_19 = new import9.ViewContainer(19,1,this,this._anchor_19);
+    this._anchor_7 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
+    this._vc_7 = new import9.ViewContainer(7,5,this,this._anchor_7);
+    this._TemplateRef_7_5 = new import11.TemplateRef_(this,7,this._anchor_7);
+    this._NgIf_7_6 = new import10.Wrapper_NgIf(this._vc_7.vcRef,this._TemplateRef_7_5);
+    this._text_8 = this.renderer.createText(this._el_5,'\n          ',(null as any));
+    this._anchor_9 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
+    this._vc_9 = new import9.ViewContainer(9,5,this,this._anchor_9);
+    this._TemplateRef_9_5 = new import11.TemplateRef_(this,9,this._anchor_9);
+    this._NgIf_9_6 = new import10.Wrapper_NgIf(this._vc_9.vcRef,this._TemplateRef_9_5);
+    this._text_10 = this.renderer.createText(this._el_5,'\n        ',(null as any));
+    this._text_11 = this.renderer.createText(this._el_3,'\n      ',(null as any));
+    this._text_12 = this.renderer.createText(this._el_1,'\n      ',(null as any));
+    this._el_13 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_14 = this.renderer.createText(this._el_13,'\n        ',(null as any));
+    this._el_15 = import3.createRenderElement(this.renderer,this._el_13,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
+    this._text_16 = this.renderer.createText(this._el_15,'\n          ',(null as any));
+    this._anchor_17 = this.renderer.createTemplateAnchor(this._el_15,(null as any));
+    this._vc_17 = new import9.ViewContainer(17,15,this,this._anchor_17);
+    this._TemplateRef_17_5 = new import11.TemplateRef_(this,17,this._anchor_17);
+    this._NgIf_17_6 = new import10.Wrapper_NgIf(this._vc_17.vcRef,this._TemplateRef_17_5);
+    this._text_18 = this.renderer.createText(this._el_15,'\n          ',(null as any));
+    this._anchor_19 = this.renderer.createTemplateAnchor(this._el_15,(null as any));
+    this._vc_19 = new import9.ViewContainer(19,15,this,this._anchor_19);
     this._TemplateRef_19_5 = new import11.TemplateRef_(this,19,this._anchor_19);
-    this._NgFor_19_6 = new import10.Wrapper_NgFor(this._vc_19.vcRef,this._TemplateRef_19_5,this.parentView.injectorGet(import12.IterableDiffers,this.parentIndex),this.ref);
-    this._text_20 = this.renderer.createText(this._el_1,'\n      ',(null as any));
-    this._el_21 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_22 = this.renderer.createText(this._el_21,'\n        ',(null as any));
-    this._el_23 = import3.createRenderElement(this.renderer,this._el_21,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
-    this._text_24 = this.renderer.createText(this._el_23,'\n          ',(null as any));
-    this._el_25 = import3.createRenderElement(this.renderer,this._el_23,'i',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_26 = this.renderer.createText(this._el_23,'\n        ',(null as any));
-    this._text_27 = this.renderer.createText(this._el_21,'\n      ',(null as any));
-    this._text_28 = this.renderer.createText(this._el_1,'\n      ',(null as any));
-    this._el_29 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_30 = this.renderer.createText(this._el_29,'\n        ',(null as any));
-    this._el_31 = import3.createRenderElement(this.renderer,this._el_29,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
-    this._text_32 = this.renderer.createText(this._el_31,'\n          ',(null as any));
-    this._el_33 = import3.createRenderElement(this.renderer,this._el_31,'i',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_34 = this.renderer.createText(this._el_31,'\n        ',(null as any));
-    this._text_35 = this.renderer.createText(this._el_29,'\n      ',(null as any));
-    this._text_36 = this.renderer.createText(this._el_1,'\n    ',(null as any));
-    this._text_37 = this.renderer.createText(parentRenderNode,'\n  ',(null as any));
+    this._NgIf_19_6 = new import10.Wrapper_NgIf(this._vc_19.vcRef,this._TemplateRef_19_5);
+    this._text_20 = this.renderer.createText(this._el_15,'\n        ',(null as any));
+    this._text_21 = this.renderer.createText(this._el_13,'\n      ',(null as any));
+    this._text_22 = this.renderer.createText(this._el_1,'\n      \n      ',(null as any));
+    this._el_23 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','page-counter'),(null as any));
+    this._text_24 = this.renderer.createText(this._el_23,'\n        ',(null as any));
+    this._el_25 = import3.createRenderElement(this.renderer,this._el_23,'li',new import3.InlineArray2(2,'class','current-page'),(null as any));
+    this._text_26 = this.renderer.createText(this._el_25,'',(null as any));
+    this._text_27 = this.renderer.createText(this._el_23,'\n        ',(null as any));
+    this._el_28 = import3.createRenderElement(this.renderer,this._el_23,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_29 = this.renderer.createText(this._el_28,'/',(null as any));
+    this._text_30 = this.renderer.createText(this._el_23,'\n        ',(null as any));
+    this._el_31 = import3.createRenderElement(this.renderer,this._el_23,'li',new import3.InlineArray2(2,'class','total-page'),(null as any));
+    this._text_32 = this.renderer.createText(this._el_31,'',(null as any));
+    this._text_33 = this.renderer.createText(this._el_23,'\n      ',(null as any));
+    this._text_34 = this.renderer.createText(this._el_1,'\n      ',(null as any));
+    this._el_35 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_36 = this.renderer.createText(this._el_35,'\n        ',(null as any));
+    this._el_37 = import3.createRenderElement(this.renderer,this._el_35,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
+    this._text_38 = this.renderer.createText(this._el_37,'\n          ',(null as any));
+    this._anchor_39 = this.renderer.createTemplateAnchor(this._el_37,(null as any));
+    this._vc_39 = new import9.ViewContainer(39,37,this,this._anchor_39);
+    this._TemplateRef_39_5 = new import11.TemplateRef_(this,39,this._anchor_39);
+    this._NgIf_39_6 = new import10.Wrapper_NgIf(this._vc_39.vcRef,this._TemplateRef_39_5);
+    this._text_40 = this.renderer.createText(this._el_37,'\n          ',(null as any));
+    this._anchor_41 = this.renderer.createTemplateAnchor(this._el_37,(null as any));
+    this._vc_41 = new import9.ViewContainer(41,37,this,this._anchor_41);
+    this._TemplateRef_41_5 = new import11.TemplateRef_(this,41,this._anchor_41);
+    this._NgIf_41_6 = new import10.Wrapper_NgIf(this._vc_41.vcRef,this._TemplateRef_41_5);
+    this._text_42 = this.renderer.createText(this._el_37,'\n        ',(null as any));
+    this._text_43 = this.renderer.createText(this._el_35,'\n      ',(null as any));
+    this._text_44 = this.renderer.createText(this._el_1,'\n      ',(null as any));
+    this._el_45 = import3.createRenderElement(this.renderer,this._el_1,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_46 = this.renderer.createText(this._el_45,'\n        ',(null as any));
+    this._el_47 = import3.createRenderElement(this.renderer,this._el_45,'a',new import3.InlineArray2(2,'href','javascript:void(0)'),(null as any));
+    this._text_48 = this.renderer.createText(this._el_47,'\n          ',(null as any));
+    this._anchor_49 = this.renderer.createTemplateAnchor(this._el_47,(null as any));
+    this._vc_49 = new import9.ViewContainer(49,47,this,this._anchor_49);
+    this._TemplateRef_49_5 = new import11.TemplateRef_(this,49,this._anchor_49);
+    this._NgIf_49_6 = new import10.Wrapper_NgIf(this._vc_49.vcRef,this._TemplateRef_49_5);
+    this._text_50 = this.renderer.createText(this._el_47,'\n          ',(null as any));
+    this._anchor_51 = this.renderer.createTemplateAnchor(this._el_47,(null as any));
+    this._vc_51 = new import9.ViewContainer(51,47,this,this._anchor_51);
+    this._TemplateRef_51_5 = new import11.TemplateRef_(this,51,this._anchor_51);
+    this._NgIf_51_6 = new import10.Wrapper_NgIf(this._vc_51.vcRef,this._TemplateRef_51_5);
+    this._text_52 = this.renderer.createText(this._el_47,'\n        ',(null as any));
+    this._text_53 = this.renderer.createText(this._el_45,'\n      ',(null as any));
+    this._text_54 = this.renderer.createText(this._el_1,'\n    ',(null as any));
+    this._text_55 = this.renderer.createText(parentRenderNode,'\n  ',(null as any));
     var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_5,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_5));
-    var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_13,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_13));
-    var disposable_2:Function = import3.subscribeToRenderElement(this,this._el_23,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_23));
-    var disposable_3:Function = import3.subscribeToRenderElement(this,this._el_31,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_31));
+    var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_15,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_15));
+    var disposable_2:Function = import3.subscribeToRenderElement(this,this._el_37,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_37));
+    var disposable_3:Function = import3.subscribeToRenderElement(this,this._el_47,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_47));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [
       this._text_0,
       this._el_1,
@@ -318,37 +444,55 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
       this._text_4,
       this._el_5,
       this._text_6,
-      this._el_7,
+      this._anchor_7,
       this._text_8,
-      this._text_9,
+      this._anchor_9,
       this._text_10,
-      this._el_11,
+      this._text_11,
       this._text_12,
       this._el_13,
       this._text_14,
       this._el_15,
       this._text_16,
-      this._text_17,
+      this._anchor_17,
       this._text_18,
       this._anchor_19,
       this._text_20,
-      this._el_21,
+      this._text_21,
       this._text_22,
       this._el_23,
       this._text_24,
       this._el_25,
       this._text_26,
       this._text_27,
-      this._text_28,
-      this._el_29,
+      this._el_28,
+      this._text_29,
       this._text_30,
       this._el_31,
       this._text_32,
-      this._el_33,
+      this._text_33,
       this._text_34,
-      this._text_35,
+      this._el_35,
       this._text_36,
-      this._text_37
+      this._el_37,
+      this._text_38,
+      this._anchor_39,
+      this._text_40,
+      this._anchor_41,
+      this._text_42,
+      this._text_43,
+      this._text_44,
+      this._el_45,
+      this._text_46,
+      this._el_47,
+      this._text_48,
+      this._anchor_49,
+      this._text_50,
+      this._anchor_51,
+      this._text_52,
+      this._text_53,
+      this._text_54,
+      this._text_55
     ]
     ),[
       disposable_0,
@@ -360,61 +504,97 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
+    if (((token === import11.TemplateRef) && (7 === requestNodeIndex))) { return this._TemplateRef_7_5; }
+    if (((token === import12.NgIf) && (7 === requestNodeIndex))) { return this._NgIf_7_6.context; }
+    if (((token === import11.TemplateRef) && (9 === requestNodeIndex))) { return this._TemplateRef_9_5; }
+    if (((token === import12.NgIf) && (9 === requestNodeIndex))) { return this._NgIf_9_6.context; }
+    if (((token === import11.TemplateRef) && (17 === requestNodeIndex))) { return this._TemplateRef_17_5; }
+    if (((token === import12.NgIf) && (17 === requestNodeIndex))) { return this._NgIf_17_6.context; }
     if (((token === import11.TemplateRef) && (19 === requestNodeIndex))) { return this._TemplateRef_19_5; }
-    if (((token === import13.NgFor) && (19 === requestNodeIndex))) { return this._NgFor_19_6.context; }
+    if (((token === import12.NgIf) && (19 === requestNodeIndex))) { return this._NgIf_19_6.context; }
+    if (((token === import11.TemplateRef) && (39 === requestNodeIndex))) { return this._TemplateRef_39_5; }
+    if (((token === import12.NgIf) && (39 === requestNodeIndex))) { return this._NgIf_39_6.context; }
+    if (((token === import11.TemplateRef) && (41 === requestNodeIndex))) { return this._TemplateRef_41_5; }
+    if (((token === import12.NgIf) && (41 === requestNodeIndex))) { return this._NgIf_41_6.context; }
+    if (((token === import11.TemplateRef) && (49 === requestNodeIndex))) { return this._TemplateRef_49_5; }
+    if (((token === import12.NgIf) && (49 === requestNodeIndex))) { return this._NgIf_49_6.context; }
+    if (((token === import11.TemplateRef) && (51 === requestNodeIndex))) { return this._TemplateRef_51_5; }
+    if (((token === import12.NgIf) && (51 === requestNodeIndex))) { return this._NgIf_51_6.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    const currVal_19_0_0:any = this.context.pages;
-    this._NgFor_19_6.check_ngForOf(currVal_19_0_0,throwOnChange,false);
-    this._NgFor_19_6.ngDoCheck(this,this._anchor_19,throwOnChange);
+    const currVal_7_0_0:boolean = !this.context.canPrevious();
+    this._NgIf_7_6.check_ngIf(currVal_7_0_0,throwOnChange,false);
+    this._NgIf_7_6.ngDoCheck(this,this._anchor_7,throwOnChange);
+    const currVal_9_0_0:any = this.context.canPrevious();
+    this._NgIf_9_6.check_ngIf(currVal_9_0_0,throwOnChange,false);
+    this._NgIf_9_6.ngDoCheck(this,this._anchor_9,throwOnChange);
+    const currVal_17_0_0:boolean = !this.context.canPrevious();
+    this._NgIf_17_6.check_ngIf(currVal_17_0_0,throwOnChange,false);
+    this._NgIf_17_6.ngDoCheck(this,this._anchor_17,throwOnChange);
+    const currVal_19_0_0:any = this.context.canPrevious();
+    this._NgIf_19_6.check_ngIf(currVal_19_0_0,throwOnChange,false);
+    this._NgIf_19_6.ngDoCheck(this,this._anchor_19,throwOnChange);
+    const currVal_39_0_0:boolean = !this.context.canNext();
+    this._NgIf_39_6.check_ngIf(currVal_39_0_0,throwOnChange,false);
+    this._NgIf_39_6.ngDoCheck(this,this._anchor_39,throwOnChange);
+    const currVal_41_0_0:any = this.context.canNext();
+    this._NgIf_41_6.check_ngIf(currVal_41_0_0,throwOnChange,false);
+    this._NgIf_41_6.ngDoCheck(this,this._anchor_41,throwOnChange);
+    const currVal_49_0_0:boolean = !this.context.canNext();
+    this._NgIf_49_6.check_ngIf(currVal_49_0_0,throwOnChange,false);
+    this._NgIf_49_6.ngDoCheck(this,this._anchor_49,throwOnChange);
+    const currVal_51_0_0:any = this.context.canNext();
+    this._NgIf_51_6.check_ngIf(currVal_51_0_0,throwOnChange,false);
+    this._NgIf_51_6.ngDoCheck(this,this._anchor_51,throwOnChange);
+    this._vc_7.detectChangesInNestedViews(throwOnChange);
+    this._vc_9.detectChangesInNestedViews(throwOnChange);
+    this._vc_17.detectChangesInNestedViews(throwOnChange);
     this._vc_19.detectChangesInNestedViews(throwOnChange);
-    const currVal_41:boolean = !this.context.canPrevious();
-    if (import3.checkBinding(throwOnChange,this._expr_41,currVal_41)) {
-      this.renderer.setElementClass(this._el_3,'disabled',currVal_41);
-      this._expr_41 = currVal_41;
+    this._vc_39.detectChangesInNestedViews(throwOnChange);
+    this._vc_41.detectChangesInNestedViews(throwOnChange);
+    this._vc_49.detectChangesInNestedViews(throwOnChange);
+    this._vc_51.detectChangesInNestedViews(throwOnChange);
+    const currVal_80:boolean = !this.context.canPrevious();
+    if (import3.checkBinding(throwOnChange,this._expr_80,currVal_80)) {
+      this.renderer.setElementClass(this._el_3,'disabled',currVal_80);
+      this._expr_80 = currVal_80;
     }
-    const currVal_42:any = import3.inlineInterpolate(1,'',this.context.pagerPreviousIcon,'');
-    if (import3.checkBinding(throwOnChange,this._expr_42,currVal_42)) {
-      this.renderer.setElementProperty(this._el_7,'className',currVal_42);
-      this._expr_42 = currVal_42;
+    const currVal_81:boolean = !this.context.canPrevious();
+    if (import3.checkBinding(throwOnChange,this._expr_81,currVal_81)) {
+      this.renderer.setElementClass(this._el_13,'disabled',currVal_81);
+      this._expr_81 = currVal_81;
     }
-    const currVal_43:boolean = !this.context.canPrevious();
-    if (import3.checkBinding(throwOnChange,this._expr_43,currVal_43)) {
-      this.renderer.setElementClass(this._el_11,'disabled',currVal_43);
-      this._expr_43 = currVal_43;
+    const currVal_82:any = import3.inlineInterpolate(1,'',this.context.page,'');
+    if (import3.checkBinding(throwOnChange,this._expr_82,currVal_82)) {
+      this.renderer.setText(this._text_26,currVal_82);
+      this._expr_82 = currVal_82;
     }
-    const currVal_44:any = import3.inlineInterpolate(1,'',this.context.pagerLeftArrowIcon,'');
-    if (import3.checkBinding(throwOnChange,this._expr_44,currVal_44)) {
-      this.renderer.setElementProperty(this._el_15,'className',currVal_44);
-      this._expr_44 = currVal_44;
-    }
-    const currVal_45:boolean = !this.context.canNext();
-    if (import3.checkBinding(throwOnChange,this._expr_45,currVal_45)) {
-      this.renderer.setElementClass(this._el_21,'disabled',currVal_45);
-      this._expr_45 = currVal_45;
-    }
-    const currVal_46:any = import3.inlineInterpolate(1,'',this.context.pagerRightArrowIcon,'');
-    if (import3.checkBinding(throwOnChange,this._expr_46,currVal_46)) {
-      this.renderer.setElementProperty(this._el_25,'className',currVal_46);
-      this._expr_46 = currVal_46;
-    }
-    const currVal_47:boolean = !this.context.canNext();
-    if (import3.checkBinding(throwOnChange,this._expr_47,currVal_47)) {
-      this.renderer.setElementClass(this._el_29,'disabled',currVal_47);
-      this._expr_47 = currVal_47;
-    }
-    const currVal_48:any = import3.inlineInterpolate(1,'',this.context.pagerNextIcon,'');
-    if (import3.checkBinding(throwOnChange,this._expr_48,currVal_48)) {
-      this.renderer.setElementProperty(this._el_33,'className',currVal_48);
-      this._expr_48 = currVal_48;
+    const currVal_83:any = import3.inlineInterpolate(1,'',this.context.totalPages,'');
+    if (import3.checkBinding(throwOnChange,this._expr_83,currVal_83)) {
+      this.renderer.setText(this._text_32,currVal_83);
+      this._expr_83 = currVal_83;
     }
   }
   destroyInternal():void {
+    this._vc_7.destroyNestedViews();
+    this._vc_9.destroyNestedViews();
+    this._vc_17.destroyNestedViews();
     this._vc_19.destroyNestedViews();
+    this._vc_39.destroyNestedViews();
+    this._vc_41.destroyNestedViews();
+    this._vc_49.destroyNestedViews();
+    this._vc_51.destroyNestedViews();
   }
   createEmbeddedViewInternal(nodeIndex:number):import2.AppView<any> {
-    if ((nodeIndex == 19)) { return new View_DataTablePagerComponent1(this.viewUtils,this,19,this._anchor_19,this._vc_19); }
+    if ((nodeIndex == 7)) { return new View_DataTablePagerComponent1(this.viewUtils,this,7,this._anchor_7,this._vc_7); }
+    if ((nodeIndex == 9)) { return new View_DataTablePagerComponent2(this.viewUtils,this,9,this._anchor_9,this._vc_9); }
+    if ((nodeIndex == 17)) { return new View_DataTablePagerComponent3(this.viewUtils,this,17,this._anchor_17,this._vc_17); }
+    if ((nodeIndex == 19)) { return new View_DataTablePagerComponent4(this.viewUtils,this,19,this._anchor_19,this._vc_19); }
+    if ((nodeIndex == 39)) { return new View_DataTablePagerComponent5(this.viewUtils,this,39,this._anchor_39,this._vc_39); }
+    if ((nodeIndex == 41)) { return new View_DataTablePagerComponent6(this.viewUtils,this,41,this._anchor_41,this._vc_41); }
+    if ((nodeIndex == 49)) { return new View_DataTablePagerComponent7(this.viewUtils,this,49,this._anchor_49,this._vc_49); }
+    if ((nodeIndex == 51)) { return new View_DataTablePagerComponent8(this.viewUtils,this,51,this._anchor_51,this._vc_51); }
     return (null as any);
   }
   handleEvent_5(eventName:string,$event:any):boolean {
@@ -426,7 +606,7 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
     }
     return result;
   }
-  handleEvent_13(eventName:string,$event:any):boolean {
+  handleEvent_15(eventName:string,$event:any):boolean {
     this.markPathToRootAsCheckOnce();
     var result:boolean = true;
     if ((eventName == 'click')) {
@@ -435,7 +615,7 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
     }
     return result;
   }
-  handleEvent_23(eventName:string,$event:any):boolean {
+  handleEvent_37(eventName:string,$event:any):boolean {
     this.markPathToRootAsCheckOnce();
     var result:boolean = true;
     if ((eventName == 'click')) {
@@ -444,7 +624,7 @@ export class View_DataTablePagerComponent0 extends import2.AppView<import0.DataT
     }
     return result;
   }
-  handleEvent_31(eventName:string,$event:any):boolean {
+  handleEvent_47(eventName:string,$event:any):boolean {
     this.markPathToRootAsCheckOnce();
     var result:boolean = true;
     if ((eventName == 'click')) {

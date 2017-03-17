@@ -1821,9 +1821,9 @@ var DatatableComponent = (function () {
         this.messages = {
             // Message to show when array is presented
             // but contains no values
-            emptyMessage: 'No data to display',
+            emptyMessage: '',
             // Footer total message
-            totalMessage: 'total'
+            totalMessage: '개'
         };
         /**
          * This will be used when displaying or selecting rows.
@@ -2826,7 +2826,7 @@ var DataTableFooterComponent = (function () {
     DataTableFooterComponent = __decorate([
         core_1.Component({
             selector: 'datatable-footer',
-            template: "\n    <div\n      [style.height.px]=\"footerHeight\">\n      <div class=\"page-count\">{{rowCount.toLocaleString()}} {{totalMessage}}</div>\n      <datatable-pager\n        [pagerLeftArrowIcon]=\"pagerLeftArrowIcon\"\n        [pagerRightArrowIcon]=\"pagerRightArrowIcon\"\n        [pagerPreviousIcon]=\"pagerPreviousIcon\"\n        [pagerNextIcon]=\"pagerNextIcon\"\n        [page]=\"curPage\"\n        [size]=\"pageSize\"\n        [count]=\"rowCount\"\n        [hidden]=\"!isVisible\"\n        (change)=\"page.emit($event)\">\n       </datatable-pager>\n     </div>\n  ",
+            template: "\n    <div\n      [style.height.px]=\"footerHeight\">\n      <div class=\"page-count\">\uCD1D {{rowCount.toLocaleString()}}{{totalMessage}}</div>\n      <datatable-pager\n        [pagerLeftArrowIcon]=\"pagerLeftArrowIcon\"\n        [pagerRightArrowIcon]=\"pagerRightArrowIcon\"\n        [pagerPreviousIcon]=\"pagerPreviousIcon\"\n        [pagerNextIcon]=\"pagerNextIcon\"\n        [page]=\"curPage\"\n        [size]=\"pageSize\"\n        [count]=\"rowCount\"\n        [hidden]=\"!isVisible\"\n        (change)=\"page.emit($event)\">\n       </datatable-pager>\n     </div>\n  ",
             host: {
                 class: 'datatable-footer'
             },
@@ -2995,7 +2995,7 @@ var DataTablePagerComponent = (function () {
     DataTablePagerComponent = __decorate([
         core_1.Component({
             selector: 'datatable-pager',
-            template: "\n    <ul class=\"pager\">\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(1)\">\n          <i class=\"{{pagerPreviousIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"prevPage()\">\n          <i class=\"{{pagerLeftArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li\n        class=\"pages\"\n        *ngFor=\"let pg of pages\"\n        [class.active]=\"pg.number === page\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(pg.number)\">\n          {{pg.text}}\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"nextPage()\">\n          <i class=\"{{pagerRightArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(totalPages)\">\n          <i class=\"{{pagerNextIcon}}\"></i>\n        </a>\n      </li>\n    </ul>\n  ",
+            template: "\n    <ul class=\"pager\">\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(1)\">\n          <img *ngIf=\"!canPrevious()\" src=\"assets/img/ic_pagenation_left2_no.png\">\n          <img *ngIf=\"canPrevious()\" src=\"assets/img/ic_pagenation_left2.png\">\n        </a>\n      </li>\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"prevPage()\">\n          <img *ngIf=\"!canPrevious()\" src=\"assets/img/ic_pagenation_left_no.png\">\n          <img *ngIf=\"canPrevious()\" src=\"assets/img/ic_pagenation_left.png\">\n        </a>\n      </li>\n      \n      <div class=\"page-counter\">\n        <li class=\"current-page\">{{page}}</li>\n        <li>/</li>\n        <li class=\"total-page\">{{totalPages}}</li>\n      </div>\n      <li>\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"nextPage()\">\n          <img *ngIf=\"!canNext()\" src=\"assets/img/ic_pagenation_right_no.png\">\n          <img *ngIf=\"canNext()\" src=\"assets/img/ic_pagenation_right.png\">\n        </a>\n      </li>\n      <li>\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(totalPages)\">\n          <img *ngIf=\"!canNext()\" src=\"assets/img/ic_pagenation_right2_no.png\">\n          <img *ngIf=\"canNext()\" src=\"assets/img/ic_pagenation_right2.png\">\n        </a>\n      </li>\n    </ul>\n  ",
             host: {
                 class: 'datatable-pager'
             },
