@@ -7,7 +7,7 @@ import {
   template: `
     <div
       [style.height.px]="footerHeight">
-      <div class="page-count">{{rowCount.toLocaleString()}} {{totalMessage}}</div>
+      <div class="page-count">총 {{rowCount.toLocaleString()}}{{totalMessage}}</div>
       <datatable-pager
         [pagerLeftArrowIcon]="pagerLeftArrowIcon"
         [pagerRightArrowIcon]="pagerRightArrowIcon"

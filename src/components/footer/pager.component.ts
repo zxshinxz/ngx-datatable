@@ -10,38 +10,38 @@ import {
         <a
           href="javascript:void(0)"
           (click)="selectPage(1)">
-          <i class="{{pagerPreviousIcon}}"></i>
+          <img *ngIf="!canPrevious()" src="assets/img/ic_pagenation_left2_no.png">
+          <img *ngIf="canPrevious()" src="assets/img/ic_pagenation_left2.png">
         </a>
       </li>
       <li [class.disabled]="!canPrevious()">
         <a
           href="javascript:void(0)"
           (click)="prevPage()">
-          <i class="{{pagerLeftArrowIcon}}"></i>
+          <img *ngIf="!canPrevious()" src="assets/img/ic_pagenation_left_no.png">
+          <img *ngIf="canPrevious()" src="assets/img/ic_pagenation_left.png">
         </a>
       </li>
-      <li
-        class="pages"
-        *ngFor="let pg of pages"
-        [class.active]="pg.number === page">
-        <a
-          href="javascript:void(0)"
-          (click)="selectPage(pg.number)">
-          {{pg.text}}
-        </a>
-      </li>
-      <li [class.disabled]="!canNext()">
+      
+      <div class="page-counter">
+        <li class="current-page">{{page}}</li>
+        <li>/</li>
+        <li class="total-page">{{totalPages}}</li>
+      </div>
+      <li>
         <a
           href="javascript:void(0)"
           (click)="nextPage()">
-          <i class="{{pagerRightArrowIcon}}"></i>
+          <img *ngIf="!canNext()" src="assets/img/ic_pagenation_right_no.png">
+          <img *ngIf="canNext()" src="assets/img/ic_pagenation_right.png">
         </a>
       </li>
-      <li [class.disabled]="!canNext()">
+      <li>
         <a
           href="javascript:void(0)"
           (click)="selectPage(totalPages)">
-          <i class="{{pagerNextIcon}}"></i>
+          <img *ngIf="!canNext()" src="assets/img/ic_pagenation_right2_no.png">
+          <img *ngIf="canNext()" src="assets/img/ic_pagenation_right2.png">
         </a>
       </li>
     </ul>
